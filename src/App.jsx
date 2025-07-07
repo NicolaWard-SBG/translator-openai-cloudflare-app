@@ -14,8 +14,8 @@ function App() {
     setTranslated("");
 
     try {
-      const workerUrl =
-        "https://translator-worker.openai-api-nw.workers.dev/api/translate";
+      // Use relative URL since the function will be deployed with your site
+      const workerUrl = "/api/translate";
 
       const response = await fetch(workerUrl, {
         method: "POST",
@@ -98,5 +98,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
